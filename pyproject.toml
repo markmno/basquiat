@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=58.0.4", "wheel>=0.37.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mjclone"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.11"
+authors = [{name="Mark Mayerfeld", email = "nosanmark@gmail.com"}]
+license = {file="LICENSE"}
+readme = "README.md"
+dependencies=[
+    "kandinsky2 @ git+https://github.com/ai-forever/Kandinsky-2.git",
+    "opencv-contrib-python", 
+    "clip @ git+https://github.com/openai/CLIP.git"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "ipykernel",
+    "tox"
+]
+
+[project.urls]
+repository = "https://github.com/RakitaLabSoftware/rlsmorph" 
+
+[tool.setuptools]
+packages = ["mjclone"]
