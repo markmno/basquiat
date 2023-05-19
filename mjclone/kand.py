@@ -1,26 +1,24 @@
-from kandinsky2.kandinsky2_1_model import Kandinsky2_1
+from kandinsky2 import get_kandinsky2_1
 from PIL import Image
 
 
 def fuse_images(img1_path: str, img2_path: str):
-    kand = Kandinsky2_1()
-
-    model = get_kandinsky2(
-        "cpu", task_type="text2img", model_version="2.1", use_flash_attention=True
-    )
-    images_texts = [Image.open("img1.jpg"), Image.open("img2.jpg")]
+    model = get_kandinsky2_1("cuda", task_type="text2img")
+    images_texts = ["shrek", Image.open(img1_path), "gigachad", Image.open(img2_path)]
     weights = [
-        0.5,
-        0.5,
+        0.25,
+        0.25,
+        0.25,
+        0.25,
     ]
     images = model.mix_images(
         images_texts,
         weights,
-        num_steps=150,
+        num_steps=50,
         batch_size=1,
-        guidance_scale=5,
-        h=768,
-        w=768,
+        guidance_scale=10,
+        h=500,
+        w=500,
         sampler="p_sampler",
         prior_cf_scale=4,
         prior_steps="5",

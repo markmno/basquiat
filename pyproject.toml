@@ -12,7 +12,8 @@ license = {file="LICENSE"}
 readme = "README.md"
 dependencies=[
     "kandinsky2 @ git+https://github.com/ai-forever/Kandinsky-2.git",
-    "opencv-contrib-python", 
+    "opencv-contrib-python",
+    "flash-attn", 
     "clip @ git+https://github.com/openai/CLIP.git"
 ]
 
