@@ -11,9 +11,17 @@ authors = [{name="Mark Mayerfeld", email = "nosanmark@gmail.com"}]
 license = {file="LICENSE"}
 readme = "README.md"
 dependencies=[
-    "kandinsky2 @ git+https://github.com/ai-forever/Kandinsky-2.git",
+    "torch~=2.0",
+    "transformers",
     "opencv-contrib-python",
-    "flash-attn", 
+    "flash-attn",
+    "diffusers",
+    "safetensors",
+    "sentencepiece",
+    "accelerate",
+    "bitsandbytes",
+    "clip-interrogator==0.6.0",
+    "kandinsky2 @ git+https://github.com/markmno/Kandinsky-2.git",
     "clip @ git+https://github.com/openai/CLIP.git"
 ]
 
@@ -22,12 +30,10 @@ dev = [
     "pytest",
     "black",
     "isort",
-    "ipykernel",
-    "tox"
 ]
 
 [project.urls]
-repository = "https://github.com/RakitaLabSoftware/rlsmorph" 
+repository = "https://github.com/markmno/testovoe" 
 
 [tool.setuptools]
 packages = ["mjclone"]
