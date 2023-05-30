@@ -14,7 +14,6 @@ dependencies=[
     "torch~=2.0",
     "transformers",
     "opencv-contrib-python",
-    "flash-attn",
     "diffusers",
     "safetensors",
     "sentencepiece",
