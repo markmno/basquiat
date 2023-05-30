@@ -8,7 +8,7 @@ Python 3.11 required
 git clone https://github.com/markmno/testovoe.git mjclone
 cd mjclone
 pip install --upgrade pip
-pip venv .venv
+python -m venv .venv
 source .venv/bin/activate
 pip install . -e
 ```
