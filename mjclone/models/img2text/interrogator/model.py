@@ -17,9 +17,8 @@ class ClipInterrogator(Img2TxtModule):
         config=Config(
             flavor_intermediate_count=16,
             clip_model_name="ViT-L-14/openai",
-            caption_model_name="blip-large",
+            caption_model_name="blip2-2.7b",
             device="cuda",
-            chunk_size=512,
         ),
     ) -> Self:
         interrogator = Interrogator(config)

@@ -11,7 +11,7 @@ authors = [{name="Mark Mayerfeld", email = "nosanmark@gmail.com"}]
 license = {file="LICENSE"}
 readme = "README.md"
 dependencies=[
-    "torch~=2.0",
+    "torch",
     "transformers",
     "opencv-contrib-python",
     "diffusers",
